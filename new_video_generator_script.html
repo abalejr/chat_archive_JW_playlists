@@ -5,7 +5,7 @@
 </h3>
 
 
-
+[repeater chat_archive]
 <div class="archive-video-container">
 <h3>[field chatroom_archive_video_id out=field-label]</h3>
 <div class="archive-video-player">Loading the player...</div>
@@ -13,12 +13,10 @@
     document.querySelector('div.archive-video-player').id = '[field chatroom_archive_video_id]';
     jwplayer("[field chatroom_archive_video_id]").setup({
         "playlist": [
-        [repeater chat_archive]
             {
             "file": "[field chat_archive_video]",
             "image": "[field chat_archive_trader]",
             },
-        [/repeater]
         ]
         playbackRateControls: [0.75, 1, 1.25, 1.5, 2.0],
         width: "100%",
@@ -26,3 +24,4 @@
     });
 </script>
 </div>
+[/repeater]
